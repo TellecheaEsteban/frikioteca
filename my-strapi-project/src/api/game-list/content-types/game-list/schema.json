@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "game_lists",
+  "info": {
+    "singularName": "game-list",
+    "pluralName": "game-lists",
+    "displayName": "GameList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "gameInfo": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    }
+  }
+}
