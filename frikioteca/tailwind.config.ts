@@ -34,6 +34,13 @@ const config: Config = {
         impact: ["Impact"],
       },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1200px",
+      xxl: "1500px",
+    },
   },
   plugins: [
     function ({ addUtilities }: { addUtilities: any }) {

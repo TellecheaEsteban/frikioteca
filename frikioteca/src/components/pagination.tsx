@@ -9,7 +9,7 @@ const TablePaginationGames = ({ games }: { games: any[] }) => {
   return (
     <Stack spacing={2}>
       {games.length > 0 ? (
-        <div className="flex justify-evenly grid grid-cols-4 gap-4">
+        <div className="flex justify-evenly grid grid-cols-3 xl:grid-cols-4 gap-4">
           {games.map((game) => (
             <GameCard
               key={game.id}
