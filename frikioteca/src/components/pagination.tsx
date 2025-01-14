@@ -4,8 +4,9 @@ import React from "react";
 import Stack from "@mui/material/Stack";
 import GameCard from "./gameCard";
 import EmptyState from "./emptyState";
+import { Game } from "@/types/types";
 
-const TablePaginationGames = ({ games }: { games: any[] }) => {
+const TablePaginationGames = ({ games }: { games: Game[] }) => {
   return (
     <Stack spacing={2}>
       {games.length > 0 ? (

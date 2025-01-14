@@ -1,9 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 function EmptyComponent() {
   return (
     <div>
-      <img src="/images/emptyBox.svg" alt="Empty state" />
+      <Image
+        src="/images/emptyBox.svg"
+        alt="Empty state"
+        width={500}
+        height={500}
+      />
     </div>
   );
 }

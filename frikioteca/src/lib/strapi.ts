@@ -1,5 +1,3 @@
-const { STRAPI_HOST, STRAPI_TOKEN } = process.env;
-
 export function query(url: string) {
   return fetch(`http://localhost:1337/api${url}`, {
     headers: {

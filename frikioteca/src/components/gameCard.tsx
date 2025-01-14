@@ -7,7 +7,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 import { Game } from "@/types/types";
 
 export default function GameCard(props: Game) {
-  const { id, name, description, people, image, alt } = props;
+  const { id, name, people, image, alt } = props;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>

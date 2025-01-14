@@ -1,5 +1,6 @@
 import React from "react";
 import CardComponent from "./card";
+import Image from "next/image";
 
 function UsComponent() {
   return (
@@ -40,7 +41,13 @@ function UsComponent() {
           className="text-frikiBlue text-center"
           href="https://drive.google.com/file/d/1fCaDO-HrZt6titUhtunUgEZqC_AkIe9K/view?usp=drive_link"
         >
-          <img className="w-52" src="/images/qr-code.png" alt="QR menu" />
+          <Image
+            className="w-52"
+            src="/images/qr-code.png"
+            width={200}
+            height={200}
+            alt="QR menu"
+          />
         </a>
         <p className="text-frikiBlue w-full text-center text-2xl my-10 bg-frikiWhite bg-opacity-65 font-impact">
           Haz click en el QR para descargarlo o escanéalo!

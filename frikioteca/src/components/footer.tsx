@@ -1,5 +1,4 @@
 import React from "react";
-import GoogleMapComponent from "./googleMapsComponent";
 import ContactComponent from "./contactComponent";
 
 function Footer() {
@@ -10,7 +9,6 @@ function Footer() {
     >
       <div className="flex justify-around">
         <ContactComponent />
-        {/* <GoogleMapComponent /> */}
       </div>
       <p className="flex justify-center py-2 border-t border-frikiBlue">
         © 2024 Frikioteca | All Rights Reserved

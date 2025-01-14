@@ -2,9 +2,10 @@
 import { getGameInfo } from "@/lib/get-global-info";
 import React, { useEffect, useState } from "react";
 import CircularIndeterminate from "./loading";
+import { GameInfo } from "@/types/types";
 
 function GameDetailCard({ id }: { id: string }) {
-  const [game, setGame] = useState<any>(null);
+  const [game, setGame] = useState<GameInfo | null>(null);
   const [loading, setLoading] = useState(false);
 
   const [isFetching, setIsFetching] = useState(false);

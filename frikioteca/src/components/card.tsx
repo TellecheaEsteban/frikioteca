@@ -3,16 +3,18 @@ import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
+import Image from "next/image";
 
 export default function CardComponent() {
   return (
     <Card sx={{ height: 500, width: 500 }}>
       <CardCover>
-        <img
+        <Image
           src="/images/pexels-ketut-subiyanto-4350163.jpg"
-          srcSet="/images/pexels-ketut-subiyanto-4350163.jpg&dpr=2 2x"
           loading="lazy"
           alt=""
+          width={500}
+          height={500}
         />
       </CardCover>
       <CardCover
