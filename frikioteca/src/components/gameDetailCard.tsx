@@ -9,26 +9,21 @@ function GameDetailCard({ id }: { id: string }) {
   const [game, setGame] = useState<GameInfo | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const [isFetching, setIsFetching] = useState(false);
-
-  const fetchGame = async () => {
-    if (isFetching) return;
-    setIsFetching(true);
-    setLoading(true);
-    try {
-      if (!game) {
-        const gameInfo = await getGameInfo(id);
-        setGame(gameInfo);
-      }
-    } catch (error) {
-      console.error("Error fetching game:", error);
-    } finally {
-      setLoading(false);
-      setIsFetching(false);
-    }
-  };
-
   useEffect(() => {
+    const fetchGame = async () => {
+      setLoading(true);
+      try {
+        if (!game) {
+          const gameInfo = await getGameInfo(id);
+          setGame(gameInfo);
+        }
+      } catch (error) {
+        console.error("Error fetching game:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchGame();
   }, [id]);
 
