@@ -4,9 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-import { Game } from "@/types/types";
+import { GameInfo } from "@/types/types";
 
-export default function GameCard(props: Game) {
+export default function GameCard(props: GameInfo) {
   const { id, name, people, image, alt } = props;
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -20,7 +20,10 @@ export default function GameCard(props: Game) {
             <Typography variant="body2" color="text.secondary">
               {people}
             </Typography>
-            <a href={`/gameDetail/${id}`} className="text-[#a0a0a0] text-ls">
+            <a
+              href={`/gameDetail/${String(id)}`}
+              className="text-[#a0a0a0] text-ls"
+            >
               Ver mas
             </a>
           </div>

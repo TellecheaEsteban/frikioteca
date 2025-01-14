@@ -3,6 +3,7 @@ import { getGameInfo } from "@/lib/get-global-info";
 import React, { useEffect, useState } from "react";
 import CircularIndeterminate from "./loading";
 import { GameInfo } from "@/types/types";
+import Image from "next/image";
 
 function GameDetailCard({ id }: { id: string }) {
   const [game, setGame] = useState<GameInfo | null>(null);
@@ -38,10 +39,12 @@ function GameDetailCard({ id }: { id: string }) {
       ) : game ? (
         <div className="flex flex-col content-center justify-center gap-5 m-auto custom-background pt-10">
           <div className="flex flex-row justify-center gap-5 ">
-            <img
+            <Image
               className=" content-center w-[350px] h-[350px]"
               src={game.image}
               alt={game.alt}
+              width={500}
+              height={500}
             />
             <div className="flex flex-col">
               <h1 className="text-2xl text-center text-frikiBlue bg-frikiWhite bg-opacity-65">

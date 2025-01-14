@@ -4,9 +4,9 @@ import React from "react";
 import Stack from "@mui/material/Stack";
 import GameCard from "./gameCard";
 import EmptyState from "./emptyState";
-import { Game } from "@/types/types";
+import { GameInfo } from "@/types/types";
 
-const TablePaginationGames = ({ games }: { games: Game[] }) => {
+const TablePaginationGames = ({ games }: { games: GameInfo[] }) => {
   return (
     <Stack spacing={2}>
       {games.length > 0 ? (
@@ -15,6 +15,7 @@ const TablePaginationGames = ({ games }: { games: Game[] }) => {
             <GameCard
               key={game.id}
               id={game.documentId}
+              documentId={game.documentId}
               name={game.name}
               description={game.description}
               people={game.people}

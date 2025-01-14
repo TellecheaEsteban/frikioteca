@@ -1,4 +1,4 @@
-import { Game, GameInfo, GlobalInfo } from "@/types/types";
+import { Game, GlobalInfo } from "@/types/types";
 import { query } from "./strapi";
 
 export function getGlobalInfo() {
@@ -12,8 +12,7 @@ export function getGamesInfo({ page }: { page: number }) {
   const pagetest = page;
   return query(
     `/game-categories?populate[image][fields]=url&pagination[page]=${pagetest}&pagination[pageSize]=${pageSize}`
-  ).then((res: any) => {
-    console.log("res2", res);
+  ).then((res) => {
     return res.data.map((category: Game) => {
       const {
         id,
@@ -30,7 +29,7 @@ export function getGamesInfo({ page }: { page: number }) {
   });
 }
 
-export async function getGameInfo(id: string): Promise<GameInfo> {
+export async function getGameInfo(id: string) {
   try {
     const res = await query(
       `/game-categories/${id}?populate[image][fields]=url`

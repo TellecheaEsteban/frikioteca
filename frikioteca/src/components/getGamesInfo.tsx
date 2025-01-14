@@ -29,7 +29,6 @@ const GamesPage = () => {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
-
   return (
     <>
       {loading ? (
