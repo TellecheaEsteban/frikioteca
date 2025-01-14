@@ -25,7 +25,7 @@ function GameDetailCard({ id }: { id: string }) {
     };
 
     fetchGame();
-  }, [id]);
+  }, [id, game]);
 
   return (
     <div>
