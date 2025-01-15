@@ -4,7 +4,7 @@ export default () => {
     throw new Error("Environment variable PORT is not defined!");
   }
 
-  console.log(`Starting Strapi on host: 0.0.0.0, port: ${port}`);
+  console.log(`Starting Strapi BACKEND on host: 0.0.0.0, port: ${port}`);
 
   return {
     host: "0.0.0.0",
