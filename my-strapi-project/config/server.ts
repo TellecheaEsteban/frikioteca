@@ -1,5 +1,5 @@
 export default () => {
-  const port = parseInt(process.env.PORT, 10);
+  const port = 1337;
   if (!port) {
     throw new Error("Environment variable PORT is not defined!");
   }
