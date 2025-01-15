@@ -1,11 +1,9 @@
 export default ({ env }) => {
-  const host = env("HOST", "0.0.0.0");
-  const port = parseInt(process.env.PORT, 10) || env.int("PORT", 1337);
-
-  console.log(`Starting Strapi on host: ${host}, port: ${port}`);
+  const port = parseInt(process.env.PORT, 10) || 1337;
+  console.log(`Starting Strapi on host: 0.0.0.0, port: ${port}`);
 
   return {
-    host,
+    host: "0.0.0.0",
     port,
     app: {
       keys: env.array("APP_KEYS"),
